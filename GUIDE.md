@@ -179,6 +179,8 @@ This operation deletes the actual files that were created during the ROM injecti
 ✅ Multiple files can be removed at once  
 📌 The corresponding entries in the `.csv` database remain intact and can be re-injected later
 
+![GhostBat patch removal screenshot](img/delete.png)
+
 ---
 
 ### 🧹 Removing Entries from the CSV Database
@@ -192,6 +194,8 @@ This removes the ROM entry from the `.csv` database but does **not** delete the 
 
 📌 This action works **on one entry at a time**  
 📦 The patch file in the `roms/` folder remains untouched
+
+![GhostBat CSV removal screenshot](img/deletefromcsv.png)
 
 ---
 
