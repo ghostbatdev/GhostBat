@@ -1,6 +1,6 @@
 # 📓 GhostBat — Changelog
 
-Tutti i cambiamenti ufficiali al progetto **GhostBat** vengono documentati in questo file, a partire dalla versione iniziale `v1.0.0`.
+All official changes to the **GhostBat** project are documented in this file, starting from the initial release `v1.0.0`.
 
 ---
 
@@ -8,34 +8,33 @@ Tutti i cambiamenti ufficiali al progetto **GhostBat** vengono documentati in qu
 
 🎉 **Initial Public Release**
 
-### ✅ Added
-- Prima versione pubblica del launcher GhostBat
-- Supporto a oltre 200 sistemi RetroBat testati
-- Editor CSV con rilevamento duplicati e gestione multilinea
-- Meccanismo di patch reversibili con link ROM temporanei
-- Esecuzione contenuti da URL remoti (`.zip`, `.chd`, `.cue`, ecc.)
-- Interfaccia compatibile con dischi esterni USB
-- Documentazione completa in inglese e italiano (`README_EN.txt`, `README_IT.txt`)
-- File `LICENSE.md` (Creative Commons BY-NC-ND 4.0)
-- File `GhostBat_Windows-x64_v1.0.0.zip` con struttura launcher portatile
+### ✅ Added  
+- Initial release of the **GhostBat** launcher  
+- Compatibility with over 200 tested RetroBat systems  
+- Advanced CSV editor with multiline handling and duplicate detection  
+- Reversible patching mechanism with temporary ROM links  
+- Execution of remote content via URL (`.zip`, `.chd`, `.cue`)  
+- Full support for external USB drives  
+- Documentation and legal texts included in the ZIP package (`README_IT`, `README_EN`, license and disclaimer files)  
+  → Main license: [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)  
+- Archive `GhostBat_Windows-x64_v1.0.0.zip` containing portable launcher, documentation, and runtime components
 
-### 🧩 Changed
-- Configurazione automatica mod/romstemp nella struttura RetroBat
-- Integrazione esterna non distruttiva con RetroBat (`es_systems.cfg` temporaneo)
+### 🧩 Changed  
+- Automatic setup of `mod/romstemp` folder structure for RetroBat  
+- Non-destructive external integration using temporary `es_systems.cfg` injection
 
-### 📄 Documentation
-- Creazione file `README.md` pubblico su GitHub
-- Aggiunta sezione “Release Info” con changelog e link al pacchetto
+### 📄 Documentation  
+- Creation of public `README.md` file on GitHub  
+- Addition of “Release Info” section with changelog and download link
 
-### 🔐 Third-Party Components
-- Inclusione di Squid-Box.SevenZipSharp (`7z.dll`)  
-  Licenza: MIT — repository ufficiale [SevenZipSharp GitHub](https://github.com/adamhathcock/sevenzipsharp)
+### 🔐 Third-Party Components  
+- Included: Squid-Box.SevenZipSharp (`7z.dll`)  
+  License: MIT — official repository [SevenZipSharp GitHub](https://github.com/adamhathcock/sevenzipsharp)
 
 ---
 
-## 📌 Notes
-
-- ✅ Nessun ROM, BIOS o contenuto sensibile incluso nel progetto
-- ✅ Verifica SHA-256 disponibile nel file `README.md`
-- ✅ Tutti i file rispettano le licenze Creative Commons e MIT
-- ❌ GhostBat non modifica in modo permanente RetroBat o la configurazione di sistema
+## 📌 Notes  
+- ✅ No ROMs, BIOS files or sensitive content included in the project  
+- ✅ SHA-256 verification available in `README.md`  
+- ✅ All files comply with Creative Commons and MIT licenses  
+- ❌ GhostBat does not permanently modify RetroBat or system configuration
