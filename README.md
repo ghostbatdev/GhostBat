@@ -153,10 +153,9 @@ An Italian version (`README_IT.txt`) is included inside the program ZIP.
 
 ## 🚀 GhostBat Release Info
 
-🔖 Version: `v1.0.0`  
-📦 Download: [GhostBat v1.0.0](https://github.com/ghostbatdev/GhostBat/releases/download/v1.0.0/GhostBat_Windows-x64_v1.0.0.zip)   
-📄 Changelog: [`CHANGELOG.md`](CHANGELOG.md)  
-🔐 License: [`LICENSE.md`](LICENSE.md)  
-📘 Guida: [`GUIDA.md`](GUIDA.md) (🇮🇹 Italiano)
+📦 Download the latest version from the [GitHub Releases page](https://github.com/ghostbatdev/GhostBat/releases)  
+📄 Full changelog: [`CHANGELOG.md`](CHANGELOG.md)  
+🔐 License terms: [`LICENSE.md`](LICENSE.md)  
+📘 User guide (🇮🇹): [`GUIDA.md`](GUIDA.md)
 
 ---
