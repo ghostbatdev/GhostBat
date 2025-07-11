@@ -1,5 +1,12 @@
 # GhostBat Launcher & Patcher
 
+![Version](https://img.shields.io/badge/version-v1.0.0-blue)
+![License](https://img.shields.io/badge/license-CC--BY--NC--ND%204.0-lightgrey)
+![Platform](https://img.shields.io/badge/platform-Windows%20x64-blue)
+![Guide](https://img.shields.io/badge/guide-Italian%20🇮🇹-green)
+
+
+
 **GhostBat** is a portable external launcher and patcher for RetroBat that allows advanced users to dynamically load ROMs, apply temporary patches, and launch systems — all **without modifying RetroBat’s original files**.
 
 > ⚠️ GhostBat is not a replacement for RetroBat. It acts as a bridge, loading temporary content and managing system switching. Core emulation is always handled by RetroBat.
