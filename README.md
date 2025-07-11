@@ -123,9 +123,10 @@ Always verify the `.zip` hash before trusting any build.
 
 ## 🔐 License
 
-This project is licensed under [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-
-Full license terms available in [`LICENSE.md`](LICENSE.md)
+GhostBat is licensed under [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)  
+✅ Free for personal and non-commercial use only  
+❌ Commercial redistribution, modification, or bundling are prohibited  
+📄 Full license terms available in [`LICENSE.md`](LICENSE.md)
 
 ---
 
