@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/badge/version-v1.0.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC--BY--NC--ND%204.0-lightgrey)](LICENSE.md)
-[![Platform](https://img.shields.io/badge/platform-Windows%20x64-blue)](GhostBat_Windows-x64_v1.0.0.zip)
+[![Platform](https://img.shields.io/badge/platform-Windows%20x64-blue)](https://github.com/ghostbatdev/GhostBat/releases/download/v1.0.0/GhostBat_Windows-x64_v1.0.0.zip)
 [![Guide](https://img.shields.io/badge/guida-Italian%20🇮🇹-green)](GUIDA.md)
 
 
