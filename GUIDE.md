@@ -162,6 +162,43 @@ This confirms successful patching.
 
 ---
 
+## 🗑️ Managing ROM Removal — Patch Files vs CSV Entries
+
+GhostBat provides two distinct methods for removing previously added ROMs:
+
+---
+
+### 🔥 Removing Injected Patch Files from the `roms/` Folder
+
+This operation deletes the actual files that were created during the ROM injection process.
+
+✔️ Steps:
+- Use the **checkboxes** to select one or more ROM entries in the list  
+- Click the **Remove ROM** button
+
+✅ Multiple files can be removed at once  
+📌 The corresponding entries in the `.csv` database remain intact and can be re-injected later
+
+---
+
+### 🧹 Removing Entries from the CSV Database
+
+This removes the ROM entry from the `.csv` database but does **not** delete the injected patch file.
+
+✔️ Steps:
+- Click directly on the **ROM row** (not the checkbox) to select it  
+- **Right-click** to open the context menu  
+- Choose **Remove from CSV**
+
+📌 This action works **on one entry at a time**  
+📦 The patch file in the `roms/` folder remains untouched
+
+---
+
+🔁 To completely remove a ROM (both the patch and the CSV entry), perform **both actions** in sequence.
+
+---
+
 ## 🛠️ Advanced Menu Options
 
 GhostBat offers extra features via the main menu.
