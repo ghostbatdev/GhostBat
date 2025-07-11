@@ -212,6 +212,12 @@ Questa azione elimina la riga corrispondente nel file `.csv`, ma **non** rimuove
 
 ---
 
+> 🧠 Il database CSV agisce come una libreria personale di ROM:  
+> puoi inserire centinaia di titoli, mantenere la lista, e scegliere quali patchare in base alle tue esigenze.  
+> Le voci restano disponibili anche dopo la rimozione del file patchato, pronte per un nuovo utilizzo.
+
+---
+
 ## 🛠️ Menu Funzioni Avanzate
 
 GhostBat offre una serie di funzionalità extra accessibili dal menu principale.  
