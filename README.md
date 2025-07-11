@@ -145,3 +145,13 @@ The main documentation is provided in English.
 An Italian version (`README_IT.txt`) is included inside the program ZIP.
 
 ---
+
+
+## 🚀 GhostBat Release Info
+
+🔖 Version: `v1.0.0`  
+📦 Download: [`GhostBat_Windows-x64_v1.0.0.zip`](GhostBat_Windows-x64_v1.0.0.zip)  
+📄 Changelog: [`CHANGELOG.md`](CHANGELOG.md)  
+🔐 License: [`LICENSE.md`](LICENSE.md)
+
+---
