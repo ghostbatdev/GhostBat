@@ -118,7 +118,7 @@ Always verify the `.zip` hash before trusting any build.
 
 This project is licensed under [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-Full license terms available in [`LICENSE.md`](LICENSE.md)
+Full license terms available in [`LICENSE.MD`](LICENSE.MD)
 
 ---
 
