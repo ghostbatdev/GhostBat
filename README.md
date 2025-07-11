@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/badge/version-v1.0.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC--BY--NC--ND%204.0-lightgrey)](LICENSE.md)
 [![Platform](https://img.shields.io/badge/platform-Windows%20x64-blue)](GhostBat_Windows-x64_v1.0.0.zip)
-[![Guide](https://img.shields.io/badge/guida-Italian%20🇮🇹-green)](guida.md)
+[![Guide](https://img.shields.io/badge/guida-Italian%20🇮🇹-green)](GUIDA.md)
 
 
 
@@ -160,7 +160,6 @@ An Italian version (`README_IT.txt`) is included inside the program ZIP.
 📦 Download: [`GhostBat_Windows-x64_v1.0.0.zip`](GhostBat_Windows-x64_v1.0.0.zip)  
 📄 Changelog: [`CHANGELOG.md`](CHANGELOG.md)  
 🔐 License: [`LICENSE.md`](LICENSE.md)
-
 📘 Guida: [`GUIDA.md`](GUIDA.md) (🇮🇹 Italiano)
 
 ---
