@@ -156,6 +156,7 @@ An Italian version (`README_IT.txt`) is included inside the program ZIP.
 📦 Download the latest version from the [GitHub Releases page](https://github.com/ghostbatdev/GhostBat/releases)  
 📄 Full changelog: [`CHANGELOG.md`](CHANGELOG.md)  
 🔐 License terms: [`LICENSE.md`](LICENSE.md)  
-📘 User guide (🇮🇹): [`GUIDA.md`](GUIDA.md)
+📘 User guide: [`GUIDA.md`](GUIDA.md) 🇮🇹 / [`GUIDE.md`](GUIDE.md) 🇬🇧
+
 
 ---
