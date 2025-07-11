@@ -199,6 +199,12 @@ This removes the ROM entry from the `.csv` database but does **not** delete the 
 
 ---
 
+> 🧠 The CSV database acts as your personal ROM library:  
+> you can store hundreds of entries, keep them organized, and selectively inject only the ones you want at any given time.  
+> Even after deleting the patch file, the CSV entry remains available for future use.
+
+---
+
 ## 🛠️ Advanced Menu Options
 
 GhostBat offers extra features via the main menu.
