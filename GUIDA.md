@@ -175,6 +175,43 @@ Questo conferma che la patch è stata salvata correttamente.
 
 ---
 
+## 🗑️ Gestione della rimozione ROM — File Patch vs Voce CSV
+
+GhostBat offre due modalità distinte per rimuovere selettivamente le ROM inserite.
+
+---
+
+### 🔥 Rimuovere i file patchati dalla cartella `roms/`
+
+Questa funzione cancella fisicamente i file generati dopo l’iniezione della ROM.
+
+✔️ Procedura:
+- Spunta una o più ROM nella lista utilizzando le **checkbox**  
+- Premi il tasto **“Rimuovi ROM”**
+
+✅ Puoi rimuovere più file contemporaneamente  
+📌 Le voci nel file `.csv` rimangono intatte e possono essere ripatchate in seguito
+
+---
+
+### 🧹 Rimuovere la voce dal database CSV
+
+Questa azione elimina la riga corrispondente nel file `.csv`, ma **non** rimuove il file iniettato nella cartella `roms`.
+
+✔️ Procedura:
+- Clicca sulla **riga della ROM** (non la checkbox) per selezionarla  
+- Premi il **tasto destro del mouse**  
+- Seleziona **“Rimuovi da CSV”**
+
+📌 Funziona **su una ROM alla volta**  
+📦 Il file nella cartella `roms` non viene eliminato
+
+---
+
+🔁 Per rimuovere completamente una ROM (patch + voce CSV), esegui **entrambe le operazioni** in sequenza.
+
+---
+
 ## 🛠️ Menu Funzioni Avanzate
 
 GhostBat offre una serie di funzionalità extra accessibili dal menu principale.  
