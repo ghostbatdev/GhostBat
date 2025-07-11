@@ -31,11 +31,12 @@ All official changes to the **GhostBat** project are documented in this file, st
 - Included: Squid-Box.SevenZipSharp (`7z.dll`)  
   License: MIT — official repository [SevenZipSharp GitHub](https://github.com/adamhathcock/sevenzipsharp)
 
- ###  📦 ZIP Integrity
-SHA-256 checksum of GhostBat_Windows-x64_v1.0.0.zip:
-3f076294d3dc7f76c4c6c7d34c9e4fb0f82e217b9beea6a4f6064d33c197e5f1
-✅ This hash verifies the authenticity of the distributed ZIP package.
-Please compare this value before using GhostBat to ensure the integrity of your copy.
+### 📦 ZIP Integrity  
+**File:** `GhostBat_Windows-x64_v1.0.0.zip`  
+**SHA-256:** `3f076294d3dc7f76c4c6c7d34c9e4fb0f82e217b9beea6a4f6064d33c197e5f1`  
+
+✅ This checksum verifies the authenticity of the distributed ZIP package.  
+Compare it before using GhostBat to ensure the integrity of your copy.
 
 
 ---
