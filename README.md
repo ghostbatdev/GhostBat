@@ -153,5 +153,6 @@ An Italian version (`README_IT.txt`) is included inside the program ZIP.
 📦 Download: [`GhostBat_Windows-x64_v1.0.0.zip`](GhostBat_Windows-x64_v1.0.0.zip)  
 📄 Changelog: [`CHANGELOG.md`](CHANGELOG.md)  
 🔐 License: [`LICENSE.md`](LICENSE.md)
+📘 Guida: [`guida.md`](guida.md) (🇮🇹 Italiano)
 
 ---
