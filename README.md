@@ -108,16 +108,13 @@ All patches are tracked and removable, preserving RetroBat’s native structure.
 
 ---
 
-## 🧾 Package Integrity (SHA-256)
+## 🧾 Package Integrity
 
-To verify that you're using the official GhostBat package, compare its hash with the official one below:
+The SHA-256 checksum for each GhostBat release is available in the corresponding GitHub Release page and documented in the changelog.  
+Always verify the official ZIP hash before trusting any build.
 
-**SHA-256 of official ZIP package:**  
-`3f076294d3dc7f76c4c6c7d34c9e4fb0f82e217b9beea6a4f6064d33c197e5f1`
-
-✅ This checksum is published only through official channels (e.g. GitHub). GhostBat never includes ROMs or filled CSVs.  
-If you received a version with embedded content or altered functionality, it has been modified and is not supported.  
-Always verify the `.zip` hash before trusting any build.
+✅ GhostBat never includes ROMs or pre-filled CSVs.  
+❌ If you received a version with embedded content or altered behavior, it has been modified and is not officially supported.
 
 ---
 
