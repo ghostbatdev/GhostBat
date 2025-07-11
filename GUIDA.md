@@ -192,6 +192,8 @@ Questa funzione cancella fisicamente i file generati dopo l’iniezione della RO
 ✅ Puoi rimuovere più file contemporaneamente  
 📌 Le voci nel file `.csv` rimangono intatte e possono essere ripatchate in seguito
 
+![Schermata rimozione patch GhostBat](img/delete.png)
+
 ---
 
 ### 🧹 Rimuovere la voce dal database CSV
@@ -205,6 +207,8 @@ Questa azione elimina la riga corrispondente nel file `.csv`, ma **non** rimuove
 
 📌 Funziona **su una ROM alla volta**  
 📦 Il file nella cartella `roms` non viene eliminato
+
+![Schermata rimozione da CSV GhostBat](img/deletefromcsv.png)
 
 ---
 
