@@ -118,6 +118,25 @@ Always verify the official ZIP hash before trusting any build.
 
 ---
 
+## ⚠️ Security Notice – Antivirus False Positives
+
+GhostBat is **closed-source software**, and the ZIP package includes only compiled executable files.
+
+Because the executables are **not digitally signed**, some antivirus programs (especially Windows Defender) may falsely flag GhostBat as a threat (e.g. `Sabsik.FL.A!ml`).  
+This is a **false positive**, caused by automated heuristic scans — not due to malicious behavior.
+
+GhostBat:
+
+- ✅ Does not modify Windows registry  
+- ✅ Does not communicate with external servers  
+- ✅ Does not install hidden services  
+- ✅ Performs only local and reversible file operations
+
+🛡️ The software is safe if downloaded from the [official GitHub release page](https://github.com/ghostbatdev/GhostBat/releases)  
+If flagged, you may safely add the executable to your antivirus exclusions.
+
+---
+
 ## 🔐 License
 
 GhostBat is licensed under [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)  
