@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GhostBat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="showSection('home')">
+
+  <header>
+    <img src="img/ghostbat-logo.png" alt="GhostBat Logo" class="logo" />
+  </header>
+
+<nav class="main-menu">
+  <ul>
+    <li><a href="#" id="link-home" onclick="showSection('home')">Home</a></li>
+    <li><a href="#" id="link-features" onclick="showSection('features')">Funzionalità</a></li>
+    <li><a href="#" id="link-screenshots" onclick="showSection('screenshots')">Screenshot</a></li>
+    <li><a href="#" id="link-info" onclick="showSection('info')">Info & Guida</a></li>
+    <li><a href="#" id="link-download" onclick="showSection('download')">Download</a></li>
+    <li><a href="#" id="link-faq" onclick="showSection('faq')">❓ FAQ</a></li>
+    <li><a href="#" id="link-contacts" onclick="showSection('contacts')">Contatti</a></li>
+  </ul>
+</nav>
+  <section id="home">
+  
+    <div class="intro-block">
+      <h2>Benvenuto in GhostBat</h2>
+      <p>
+        <strong>GhostBat</strong> è uno strumento avanzato, modulare e reversibile progettato per estendere le funzionalità di <em>RetroBat</em> senza alterarne la struttura originale.<br><br>
+
+        È composto da due moduli principali:
+        <ul>
+          <li><strong>Patcher</strong> – seleziona oltre <em>200 sistemi compatibili</em>, modifica file <code>.csv</code> e inietta link remoti al posto delle ROM locali, tutto in modo documentato e reversibile.</li>
+          <li><strong>Launcher</strong> – gestisce l'avvio dei contenuti patchati, scaricandoli e avviandoli temporaneamente, per poi eliminarli dopo l’uso.</li>
+        </ul><br>
+
+        Tutti i contenuti sono gestiti dall’utente: GhostBat non include alcun file ROM, BIOS o emulatore.  
+        Il controllo è totale — e il rispetto della struttura RetroBat è garantito.
+      </p>
+    </div>
+
+ <div class="legal-note">
+  🔒 <strong>Avviso legale – Informativa completa</strong><br><br>
+
+  <strong>GhostBat</strong> è un progetto indipendente sviluppato da <em>Antonio Pantanella</em>.  
+  Non è sponsorizzato, affiliato né approvato dal team ufficiale di RetroBat, pur rispettandone pienamente struttura, logica e compatibilità tecnica.<br><br>
+
+  Il software è distribuito “così com’è” (<em>as-is</em>), senza garanzie di funzionamento, compatibilità o idoneità a uno scopo specifico.  
+  L'autore non è responsabile per:
+  <ul>
+    <li>⚠️ Danni diretti o indiretti, perdita di dati o malfunzionamenti</li>
+    <li>⚠️ Problemi legali derivanti dall'uso improprio o da una configurazione errata</li>
+    <li>⚠️ Contenuti, link remoti o file gestiti direttamente dagli utenti</li>
+  </ul>
+
+  GhostBat non include, distribuisce, collega o promuove in alcun modo contenuti protetti da copyright — come <strong>ROM, BIOS, emulatori o giochi commerciali</strong>.  
+  Tutti i file <code>.csv</code> sono vuoti per impostazione predefinita, e devono essere compilati manualmente dall'utente.  
+  I link remoti inseriti tramite il tool sono <strong>totalmente sotto responsabilità dell’utente</strong>: il software non li verifica, non li archivia e non ne approva il contenuto.<br><br>
+
+  Il programma richiede la presenza di RetroBat già configurato per funzionare correttamente, e interviene solo <strong>in modo reversibile</strong> sul file <code>es_systems.cfg</code>.<br><br>
+
+  L'uso è autorizzato solo in ambito <strong>personale, educativo e non commerciale</strong>, secondo i termini definiti nel file  
+  <a href="https://github.com/ghostbatdev/GhostBat/blob/main/LICENSE.md" target="_blank"><strong>LICENSE.md – Creative Commons BY-NC-ND 4.0</strong></a>:  
+  <ul>
+    <li>✅ Vietata la modifica del software o la creazione di versioni derivate</li>
+    <li>✅ Vietata la distribuzione del software su dispositivi destinati alla vendita (es. chiavette USB, miniPC, console modificate)</li>
+    <li>✅ Vietata la redistribuzione modificata o con CSV precompilati contenenti link illegali</li>
+  </ul>
+
+  💬 Il presente disclaimer è mostrato automaticamente <strong>al primo avvio</strong> del programma.  
+  📦 Tutti i documenti ufficiali – <strong>LICENSE.txt</strong>, <strong>README.txt</strong>, <strong>DISCLAIMER.txt</strong> – sono inclusi nel pacchetto <strong>GhostBat.zip</strong>.
+</div>
+
+  </section>
+
+ <section id="features">
+  <h2>🔍 Funzionalità dettagliate</h2>
+
+  <div class="features-block">
+    <h3>🧩 Patcher</h3>
+    <ul>
+      <li>Compatibilità con <strong>oltre 200 sistemi RetroBat</strong></li>
+      <li>Editor CSV integrato con duplicati multilinea</li>
+      <li>Backup manuale in <strong>formato ZIP</strong> e backup automatico silenzioso nella cartella <code>backup/</code></li>
+      <li>Importazione di pacchetti CSV esterni (es. file zip ricevuti)</li>
+      <li>Rinomina intelligente dei titoli in base al contenuto</li>
+      <li>Patch non invasive, totalmente reversibili</li>
+    </ul>
+
+    <h3>🚀 Launcher</h3>
+    <ul>
+      <li>Avvio contenuti da <strong>link temporanei</strong> gestiti via placeholder</li>
+      <li>Download ottimizzato con <strong>segmentazione in parti</strong></li>
+      <li>Gestione fallback con avviso “Content-Length assente” se non supportato</li>
+      <li>Cancellazione automatica post-esecuzione e cache locale opzionale</li>
+      <li>Supporto per `.zip`, `.chd`, `.cue`, `.7z` e altri formati</li>
+    </ul>
+
+    <h3>⚙️ Sistema</h3>
+    <ul>
+      <li>Funziona <strong>senza modificare file permanenti</strong> di RetroBat</li>
+      <li>Modifica solo il file <code>es_systems.cfg</code> in modo reversibile</li>
+      <li>Scansione automatica per identificare l'installazione RetroBat</li>
+      <li>Disclaimers mostrati all’avvio con conferma utente</li>
+      <li>Compatibilità USB e dischi esterni</li>
+    </ul>
+  </div>
+</section>
+
+  <section id="screenshots" style="display: none;">
+  <div class="guide-block">
+    <h3>Snapshot del launcher</h3>
+
+<p>
+  Questa è l’interfaccia del <strong>launcher di download</strong> che si apre automaticamente 
+  <strong>quando si avvia un gioco da RetroBat con GhostPath attivo</strong>.  
+  È progettata per essere minimale, leggibile.
+</p>
+
+    <img src="img/ghostbat-launcher.png" alt="Screenshot del launcher GhostBat">
+
+    <p>
+      Il launcher si apre quando si avvia un gioco tramite GhostBat, mostrando il nome del file scaricato.  
+      È presente una barra di avanzamento con indicazione della percentuale completata, velocità del download, dimensione totale e megabyte già scaricati.
+
+      In alto a destra è visibile la voce <strong>Force Quit</strong>, che permette di interrompere immediatamente il download con un semplice clic — utile in caso di attese lunghe o connessioni instabili.
+
+      <strong>Nota tecnica:</strong> se l’intestazione <code>Content-Length</code> non è disponibile, il launcher mostrerà solo i megabyte scaricati e la velocità.  
+      Viene inoltre notificata l’assenza di <code>Content-Length</code> nel file remoto.
+
+      <strong>Nota aggiuntiva:</strong> per file molto piccoli, la velocità e la dimensione totale potrebbero non comparire — il download termina troppo velocemente per aggiornare quei dati.
+    </p>
+  </div>
+</section>
+
+ <section id="info">
+  <h2>📘 Guida all'uso di GhostBat — Tutorial passo-passo</h2>
+  <div class="guide-block">
+
+    <!-- Disclaimer e RetroBat -->
+    <h3>⚠️ 1. Lettura del disclaimer iniziale</h3>
+    <p>All'avvio di GhostBat viene mostrato un messaggio di disclaimer sul funzionamento reversibile del programma.  
+    L’utente deve cliccare <strong>“Sì”</strong> per procedere.</p>
+    <img src="img/1.png" alt="Disclaimer" />
+
+    <h3>🔎 2. Verifica di RetroBat</h3>
+    <p>Dopo aver accettato il disclaimer, GhostBat controlla se RetroBat è presente nella root del disco.</p>
+    <p><strong>✅ RetroBat trovato! Vuoi applicare la mod?</strong></p>
+    <img src="img/2.png" alt="RetroBat trovato" />
+
+    <h3>✅ 3. Conferma applicazione mod</h3>
+    <p>GhostBat applica la mod e mostra il messaggio:</p>
+    <p><strong>Mod installata correttamente! Ora puoi selezionare i sistemi compatibili.</strong></p>
+    <img src="img/3.png" alt="Conferma mod" />
+
+    <!-- Patch sistemi -->
+    <h3>🧩 4. Apertura del patcher selettivo</h3>
+    <p>Il patcher nella cartella <code>mod</code> consente di:
+      <ul>
+        <li>Visualizzare la lista dei sistemi RetroBat compatibili</li>
+        <li>Selezionare singolarmente i sistemi da patchare</li>
+      </ul>
+    </p>
+    <img src="img/4.png" alt="Lista sistemi" />
+
+    <h3>🛠️ 5. Selezione dei sistemi</h3>
+    <p>
+      ✔️ Puoi:
+      <ul>
+        <li>Spuntare solo i sistemi desiderati</li>
+        <li>Oppure selezionarli tutti</li>
+        <li>Premere <strong>System Patch</strong> per applicare la patch</li>
+      </ul>
+    </p>
+    <img src="img/5.png" alt="System Patch" />
+
+    <h3>🍃 6. Sistemi patchati</h3>
+    <p>I sistemi patchati correttamente appaiono con <strong>riga verde</strong> nella lista laterale.</p>
+    <img src="img/6.png" alt="Sistemi patchati" />
+
+    <!-- Inserimento ROM -->
+    <h3>🌐 7. Apertura dell’Editor URL ROMS</h3>
+    <p>Clicca su <strong>Editor URL ROMS</strong> per iniziare a compilare le ROM.</p>
+    <img src="img/7.png" alt="Editor URL ROMS" />
+
+    <h3>🌍 8. Inserimento link ROM</h3>
+    <p>📌 Inserisci:
+      <ul>
+        <li><strong>Nome file ROM</strong> (es. <code>testgame.extension</code>)</li>
+        <li><strong>Link remoto o locale</strong> (es. <code>http://192.168.1.118:8080/testgame.extension</code>)</li>
+      </ul>
+    </p>
+    <p>✅ Premi <strong>Add ROM link</strong> per salvare nel file <code>.csv</code> associato.</p>
+
+    <h4>🔍 Requisiti tecnici</h4>
+    <ul>
+      <li>Estensione obbligatoria nel nome e nel link</li>
+      <li>⚠️ Senza estensione, RetroBat può dare errore</li>
+      <li>✔️ Attiva “Auto titolo” per generare il nome automatico</li>
+    </ul>
+
+    <h4>📦 ROM composte da più file</h4>
+    <p>GhostBat supporta:
+      <ul>
+        <li>MAME Naomi 2 → <code>.zip</code> + <code>.chd</code></li>
+        <li>Daphne → <code>.zip</code> principale + archivi separati</li>
+      </ul>
+    </p>
+    <p>Inserisci i file in sequenza e il launcher li associa correttamente.</p>
+    <img src="img/8.png" alt="Inserimento ROM multi-file" />
+
+    <!-- Multi-disco M3U -->
+    <h3>💿 9. Generazione M3U per giochi multi-disco</h3>
+    <p>GhostBat genera file <code>.m3u</code> per giochi con più dischi, come PlayStation 1.</p>
+    <ol>
+      <li>Inserisci i link dei dischi</li>
+      <li>Spunta i file che compongono lo stesso gioco</li>
+      <li>Premi <strong>Genera Playlist .m3u</strong></li>
+    </ol>
+    <p>⚠️ Se applichi la patch globale prima del M3U, i dischi saranno trattati separatamente.  
+    Consigliato: rimuovere e reinserire manualmente prima di generare.</p>
+    <img src="img/multidisco.png" alt="Generazione M3U" />
+
+    <!-- Patch ROM -->
+    <h3>🧃 10. Iniezione delle ROM</h3>
+    <p>Vai alla tab <strong>Lista ROMs</strong>, seleziona e premi <strong>Inject to ROM</strong>.  
+    Le ROM patchate appaiono in <strong>riga verde</strong>.</p>
+    <img src="img/9.png" alt="Inject ROM" />
+
+    <h3>✅ 11. Conferma finale</h3>
+    <p>Messaggio mostrato:</p>
+    <p><strong>Completato.  
+    1 file generati nella cartella 'roms'.</strong></p>
+    <img src="img/10.png" alt="Conferma finale" />
+
+    <!-- Rimozione ROM -->
+    <h3>🗑️ 12. Rimozione ROM — file patch vs voce CSV</h3>
+    <h4>🔥 Rimuovi file patchati</h4>
+    <ul>
+      <li>Spunta le ROM</li>
+      <li>Premi <strong>Rimuovi ROM</strong></li>
+    </ul>
+    <p>📌 Il file viene eliminato, ma la voce nel CSV rimane.</p>
+    <img src="img/delete.png" alt="Rimozione patch" />
+
+    <h4>🧹 Rimuovi voce dal CSV</h4>
+    <ul>
+      <li>Clic destro sulla voce</li>
+      <li>Seleziona <strong>Rimuovi da CSV</strong></li>
+    </ul>
+    <p>📦 Il file rimane, ma la voce nel CSV viene cancellata.</p>
+    <img src="img/deletefromcsv.png" alt="Rimozione da CSV" />
+
+    <p><strong>🔁 Per rimuovere completamente una ROM: esegui entrambe le operazioni.</strong></p>
+
+    <!-- Funzioni avanzate -->
+    <h3>🛠️ 13. Menu Funzioni Avanzate</h3>
+
+   <h4>📂 Comandi</h4>
+<ul>
+  <li><strong>Applica patch a tutti i sistemi e ROMs</strong><br>
+  Applica automaticamente la patch su tutti i sistemi supportati e le ROM presenti nei file <code>.csv</code>.</li>
+  <li><strong>Rimuovi mod definitivamente</strong><br>
+  Rimuove tutti i sistemi patchati, le ROM iniettate e i file installati da GhostBat. Ripristina RetroBat allo stato originale.</li>
+</ul>
+<h4>📘 Info</h4>
+<ul>
+  <li><strong>Leggi README</strong></li>
+  <li><strong>Leggi Disclaimer</strong></li>
+  <li><strong>Leggi License</strong></li>
+</ul>
+
+<p>I documenti sono disponibili in lingua italiana e inglese. GhostBat è interamente localizzato in italiano.</p>
+
+<h3>ℹ️ Note tecniche</h3>
+<ul>
+  <li>Tutte le modifiche effettuate tramite GhostBat sono <strong>temporanee e reversibili</strong></li>
+  <li>Ogni sistema patchato genera un file <code>.csv</code> contenente i link alle ROM</li>
+  <li>Le patch generano file nella cartella <code>roms/</code> con lo stesso nome del file inserito</li>
+</ul>
+
+<p>✅ È possibile:
+  <ul>
+    <li>Aggiungere nuove ROM in qualsiasi momento</li>
+    <li>Rimuovere voci dal CSV senza cancellare i file</li>
+    <li>Ripetere la patch ogni volta che serve</li>
+  </ul>
+</p>
+
+<h4>🧠 Uso corretto dei file CSV</h4>
+<p>I file <code>.csv</code> devono essere creati esclusivamente tramite l’Editor integrato.  
+Modifiche manuali da editor esterni possono causare:</p>
+<ul>
+  <li>❌ Errori nella gestione multi-link</li>
+  <li>❌ Conflitti o duplicazioni tra voci</li>
+  <li>❌ Malfunzionamenti nel patcher o launcher</li>
+</ul>
+
+<p>✔️ L’Editor ufficiale garantisce:
+  <ul>
+    <li>Gestione sintassi e struttura compatibile</li>
+    <li>Rimozione automatica dei file e dei doppioni</li>
+    <li>Compatibilità con tutte le funzioni di GhostBat</li>
+  </ul>
+</p>
+
+<p><strong>💡 Per una compatibilità sicura:</strong> non esportare, modificare o ripubblicare manualmente i file <code>.csv</code></p>
+
+<h3>🎉 Grazie!</h3>
+<p>Grazie per aver scelto GhostBat! Per supporto, visita il <strong>repository GitHub ufficiale</strong> o apri una issue nella sezione <em>Issues</em>.</p>
+
+  </div>
+</section>
+
+
+<section id="download">
+  <h2>📦 Download & Requisiti di sistema</h2>
+<div class="guide-block">
+  <div class="download-block">
+
+<div class="donation-box">
+      <p style="margin: 0;">
+        Ti piace GhostBat? Se vuoi supportare il progetto, puoi offrirci un caffè via 
+        <a href="https://www.paypal.com/donate/?hosted_button_id=2KM9Z3YPTQSHC" target="_blank" class="donation-link">
+          PayPal
+        </a> ☕🦇  
+        Ogni contributo aiuta a mantenere il sonar acceso!
+      </p>
+      <p style="font-size: 0.8em; margin-top: 0.7em; color: #666;">
+        GhostBat è distribuito gratuitamente e non richiede alcun pagamento per il suo utilizzo.  
+        Le donazioni sono volontarie e servono solo a sostenere lo sviluppo e la manutenzione del progetto.
+      </p>
+    </div>
+
+
+
+
+
+    <h3>⬇️ Versione disponibile</h3>
+    <p><strong>GhostBat v1.0.0 – Initial Release</strong><br>
+    Data rilascio: <strong>11 luglio 2025</strong></p>
+    <a href="https://github.com/ghostbatdev/GhostBat/releases" target="_blank">🔗 Vai alla pagina delle release su GitHub</a>
+
+<h3>🔐 Verifica dell’integrità</h3>
+<p>
+Per garantire che il pacchetto scaricato non sia stato alterato, puoi confrontare lo SHA-256 disponibile nel file <strong><a href="https://github.com/ghostbatdev/GhostBat/blob/main/CHANGELOG.md" target="_blank">CHANGELOG.md</a></strong> del repository GitHub.
+</p>
+<p>
+Il checksum è indicato accanto alla release corrente e ti permette di verificare l'integrità del file ZIP.
+</p>
+<p style="color: #d9534f; font-weight: bold;">
+⚠️ Attenzione: se il checksum SHA-256 non corrisponde, è possibile che il pacchetto non provenga da una fonte ufficiale.
+</p>
+<p>
+GhostBat è distribuito esclusivamente attraverso il <strong>repository GitHub ufficiale</strong>.  
+Verifica sempre lo SHA indicato prima di avviare il programma.
+</p>
+    <h3>🖥️ Requisiti di installazione</h3>
+    <ul>
+      <li>Sistema operativo: <strong>Windows 10 / Windows 11</strong> a 64 bit</li>
+      <li>Framework richiesto: <strong>.NET Desktop Runtime 8.0+</strong></li>
+      <li>RAM consigliata: almeno <strong>2 GB</strong> liberi</li>
+      <li>Accesso in scrittura: directory RetroBat principale</li>
+      <li>Connessione di rete: necessaria per link remoti</li>
+      <li>Account amministratore: <strong>non richiesto</strong></li>
+    </ul>
+
+    <h3>📘 Come installare .NET Desktop Runtime 8.0</h3>
+    <p>GhostBat richiede il <strong>.NET Desktop Runtime 8.0</strong>.  
+    Puoi scaricarlo dalla pagina ufficiale Microsoft:</p>
+    <p style="text-align: center;">
+      👉 <a href="https://dotnet.microsoft.com/it-it/download/dotnet/8.0" target="_blank"><strong>Scarica .NET Desktop Runtime 8.0</strong></a>
+    </p>
+    <p>📌 Sulla pagina troverai varie opzioni:  
+    seleziona la voce <strong>“.NET Desktop Runtime”</strong> per Windows 64 bit.  
+    ❌ Non usare “ASP.NET Core” o “Solo .NET Runtime” — GhostBat è un'applicazione desktop.</p>
+
+    <h3>🧾 Note di installazione</h3>
+<ul>
+  <li>GhostBat è portatile: <strong>basta estrarre la cartella ZIP</strong> e <strong>avviare il programma facendo doppio clic su GhostBat.exe</strong></li>
+  <li>Non modifica file esterni a RetroBat</li>
+  <li>Funziona anche da chiavetta USB o disco esterno</li>
+</ul>
+
+    <h3>📜 Changelog</h3>
+    <ul>
+      <li><strong>[v1.0.0] Initial Release</strong> – prima versione pubblica di GhostBat</li>
+    </ul>
+  </div>
+  </div>
+</section>
+
+<section id="faq" style="display: none;">
+<div class="guide-block">
+
+  <h2>❓ Domande frequenti - GhostBat</h2>
+
+  <!-- 🧭 AVVIO E INSTALLAZIONE -->
+  <h3>Come si avvia GhostBat per la prima volta?</h3>
+  <p>Estrai il pacchetto ZIP del launcher in una cartella qualsiasi. Poi avvia il file <code>GhostBat.exe</code>. Al primo avvio potrebbe apparire una schermata blu di SmartScreen: clicca su “Ulteriori informazioni” e poi su “Esegui comunque”.</p>
+
+  <h3>GhostBat è portatile o serve installazione?</h3>
+  <p>GhostBat è completamente portatile. Può essere usato da chiavetta USB, disco esterno o cartella locale. Non richiede installazione.</p>
+
+  <!-- 🖥️ COMPATIBILITÀ -->
+  <h3>Con quali versioni di Windows è compatibile?</h3>
+  <p>GhostBat è stato testato esclusivamente su Windows 10 e Windows 11 a 64-bit. Versioni precedenti o sistemi a 32-bit non sono supportati.</p>
+
+  <h3>GhostBat funziona se RetroBat è in una sottocartella?</h3>
+  <p>No. RetroBat deve essere installato direttamente nella root del disco (esempio: <code>D:\RetroBat</code>). Le installazioni in sottocartelle non vengono riconosciute.</p>
+
+  <h3>GhostBat supporta versioni modificate di RetroBat?</h3>
+  <p>No. È compatibile solo con la versione ufficiale di RetroBat, per garantire stabilità e compatibilità.</p>
+
+  <!-- 🔧 COMPORTAMENTO DEL LAUNCHER -->
+  <h3>Cosa viene modificato da GhostBat?</h3>
+  <p>GhostBat modifica solo il file <code>es_systems.cfg</code> per patchare i sistemi selezionati. Non altera altri file o componenti di RetroBat.</p>
+
+  <h3>GhostBat crea backup del file <code>es_systems.cfg</code>?</h3>
+  <p>No. Tuttavia puoi ripristinare la configurazione originale deselezionando tutti i sistemi e cliccando “System Patch”. In questo modo il file viene riscritto senza patch.</p>
+
+  <h3>Posso patchare più sistemi contemporaneamente?</h3>
+  <p>Sì. Puoi selezionare più sistemi nel launcher e patcharli tutti insieme. I sistemi non selezionati restano invariati.</p>
+
+  <h3>GhostBat riceverà aggiornamenti futuri?</h3>
+  <p>Possibilmente sì, in base all'interesse dimostrato dalla community. Il progetto è aperto a miglioramenti se gli utenti inviano feedback.</p>
+
+  <!-- 📁 ROM E SISTEMI COMPLESSI -->
+  <h3>GhostBat funziona con ROM reali già presenti?</h3>
+  <p>No. La cartella del sistema da patchare deve essere vuota. ROM già esistenti possono generare conflitti e vanno evitate.</p>
+
+ <h3>GhostBat funziona con ROM linkate da internet?</h3>
+<p>
+Sì, ma solo se i link inseriti nel file CSV sono <strong>diretti</strong> (HTTP/HTTPS) e accessibili <strong>senza login, token o redirect temporanei</strong>.  
+GhostBat non include link predefiniti e non scarica contenuti automaticamente: il comportamento dipende esclusivamente dai dati inseriti manualmente dall’utente.
+</p>
+<h3>GhostBat supporta ROM multilink per sistemi complessi?</h3>
+
+<p>Sì. GhostBat gestisce ROM multilink in modo avanzato, con strutture diverse a seconda del sistema:</p>
+
+<ul>
+  <li><strong>Per MAME e NAOMI/NAOMI2:</strong> il file <code>.csv</code> deve avere più righe per lo stesso gioco. Il primo link è il file <code>.zip</code> principale, seguito dai file <code>.chd</code> o altri richiesti. Ogni link va su una riga separata.</li>
+  <li><strong>Per Daphne:</strong> servono due <code>.zip</code> separati. Il primo contiene il gioco principale, il secondo è un archivio che include tutti i contenuti video e dati associati. Anche qui, ogni link va su una riga dedicata nel <code>.csv</code>.</li>
+</ul>
+
+<p>GhostBat riconosce automaticamente la struttura se i link sono ordinati correttamente e scritti uno sotto l’altro.</p>
+
+  <!-- 📜 FILE .CSV -->
+  <h3>Come viene gestito il file <code>.csv</code>?</h3>
+  <p>GhostBat genera il file <code>.csv</code> automaticamente tramite il suo editor integrato. La prima riga contiene “Lista games” e le successive i link ROM. È consigliato usare sempre l’editor interno per evitare errori.</p>
+
+  <h3>Posso modificare manualmente il <code>.csv</code>?</h3>
+  <p>Sì, ma è rischioso: potresti introdurre errori nella struttura, soprattutto con ROM multilink. L’editor interno evita questi problemi.</p>
+
+  <h3>Come rinomino un gioco nella lista?</h3>
+  <p>Fai doppio click sulla riga corrispondente nel file <code>.csv</code> tramite l’editor integrato, inserisci il nome desiderato e conferma.</p>
+
+  <!-- 🚀 EXTRA E CONSIGLI -->
+  <h3>GhostBat mostra errori se ci sono link non validi?</h3>
+  <p>No. I link non validi vengono semplicemente ignorati o saltati. Verifica sempre che siano funzionanti prima di patchare.</p>
+
+  <h3>Come sapere se un sistema non è supportato?</h3>
+  
+<p>I sistemi non compatibili vengono mostrati in rosso nel launcher. Puoi comunque usarli con RetroBat normale, ma non saranno patchabili da GhostBat.</p>
+<h3>I sistemi che richiedono BIOS non funzionano. È colpa di GhostBat?</h3>
+<p>
+  No. GhostBat non gestisce direttamente i BIOS.  
+  Questi vengono configurati da RetroBat: assicurati che RetroBat funzioni correttamente per quel sistema prima di usare il launcher.  
+  GhostBat agisce solo su sistemi già operativi.
+</p>
+<h3>È possibile interrompere un download avviato dal launcher?</h3>
+<p>
+  Sì. Durante il download, nella schermata del launcher in alto a sinistra appare la scritta <strong>Force Quit</strong>.  
+  Cliccando con il mouse su quella voce, il download in corso viene interrotto immediatamente.  
+  Questa funzione è utile se il download impiega troppo tempo, si blocca, o vuoi interrompere e riprovare con un’altra fonte.
+</p>
+
+<h3>Dopo un aggiornamento di RetroBat devo fare qualcosa?</h3>
+<p>
+  Sì. Dopo ogni aggiornamento, basta riaprire GhostBat e cliccare su <strong>System Patch</strong>.  
+  I sistemi torneranno operativi senza dover riselezionare nulla.  
+  Le ROM patchate restano intatte e non servono reinstallazioni.
+</p>
+
+<h3>Alcuni sistemi non funzionano correttamente. Cosa posso fare?</h3>
+<p>
+  Se un sistema continua a non funzionare anche dopo la patch, prova ad utilizzare fonti alternative che potrebbero avere la struttura corretta.  
+  La compatibilità dipende spesso da elementi specifici nei file, e alcuni sistemi richiedono formati difficili da documentare.  
+  Consigliamo di testare diverse soluzioni fino a trovare quella che risponde ai requisiti.
+</p>
+<h3>Come si disinstalla GhostBat e si ripristina il sistema?</h3>
+<p>
+GhostBat è distribuito come programma portatile: per rimuoverlo è sufficiente eliminare la cartella contenente l’eseguibile e i file CSV.  
+Tuttavia, per una rimozione completa di tutte le modifiche, puoi usare il comando avanzato <strong>“Rimuovi MOD definitivamente”</strong>, disponibile nel menu.
+</p>
+<p>
+Questa funzione elimina:
+<ul>
+  <li>Tutte le <strong>patch attive sui sistemi</strong></li>
+  <li>La cartella <strong>MOD</strong> e i file temporanei creati da GhostBat</li>
+  <li>Le <strong>ROM patchate</strong> presenti nel setup locale</li>
+  <li>Eventuali configurazioni aggiuntive attivate nei file <code>es_systems.cfg</code></li>
+</ul>
+</p>
+<p>
+Una volta completata, il sistema torna allo stato originale: GhostBat non lascia tracce permanenti e non modifica componenti esterni in modo irreversibile.
+</p>
+ </div>
+
+
+</section>
+<section id="contacts">
+<div class="guide-block">
+  <h3>Contatti</h3>
+  <p>
+    Per domande, suggerimenti, segnalazioni o richieste relative a GhostBat, puoi scrivere all’indirizzo:<br>
+    <strong><a href="mailto:ghostbatdev@proton.me">ghostbatdev@proton.me</a></strong>
+  </p>
+  <p>
+    Non è richiesta alcuna registrazione: il contatto è diretto, libero e protetto.  
+    GhostBat non raccoglie dati, non effettua connessioni esterne e non comunica con servizi terzi.  
+    Tutto il contenuto è gestito localmente dall’utente.
+  </p>
+
+<div class="donation-box">
+      <p style="margin: 0;">
+        Ti piace GhostBat? Se vuoi supportare il progetto, puoi offrirci un caffè via 
+        <a href="https://www.paypal.com/donate/?hosted_button_id=2KM9Z3YPTQSHC" target="_blank" class="donation-link">
+          PayPal
+        </a> ☕🦇  
+        Ogni contributo aiuta a mantenere il sonar acceso!
+      </p>
+      <p style="font-size: 0.8em; margin-top: 0.7em; color: #666;">
+        GhostBat è distribuito gratuitamente e non richiede alcun pagamento per il suo utilizzo.  
+        Le donazioni sono volontarie e servono solo a sostenere lo sviluppo e la manutenzione del progetto.
+      </p>
+    </div>
+
+
+ </div>
+</section>
+
+<footer>
+  <p>Creato da Antonio • Progetto GhostBat</p>
+  <p><a href="https://github.com/ghostbatdev/GhostBat" target="_blank">🔗 Repository ufficiale su GitHub</a></p>
+  <p>
+    ☕ Se GhostBat ti è utile, puoi supportare il progetto con una donazione libera via 
+    <a href="https://www.paypal.com/donate/?hosted_button_id=2KM9Z3YPTQSHC" target="_blank">PayPal</a> 🦇
+  </p>
+</footer>
+
+<script>
+  function showSection(id) {
+    // Mostra la sezione richiesta
+    document.querySelectorAll("section").forEach(sec => {
+      sec.style.display = (sec.id === id) ? "block" : "none";
+    });
+
+    // Rimuove classe attiva da tutti i link
+    document.querySelectorAll(".main-menu a").forEach(link => {
+      link.classList.remove("active");
+    });
+
+    // Aggiunge classe attiva al link selezionato tramite id
+    const activeLink = document.getElementById("link-" + id);
+    if (activeLink) activeLink.classList.add("active");
+  }
+
+  // Mostra la Home all’avvio
+  window.addEventListener("DOMContentLoaded", () => showSection("home"));
+</script>
+
+
+
+
+<!-- Banner Privacy Policy -->
+<div id="privacy-banner" style="position:fixed; bottom:0; width:100%; background:#222; color:#fff; padding:10px; text-align:center; font-size:0.85em; z-index:999;">
+  Questo sito è ospitato su GitHub Pages. GitHub può raccogliere dati tecnici (IP, browser, ecc).  
+  Consulta la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" style="color:#0af;">Privacy Policy di GitHub</a>.
+  <button id="accept-button" style="margin-left:10px; background:#0af; color:#fff; border:none; padding:5px 10px; cursor:pointer;">Accetta</button>
+  <button id="reject-button" style="margin-left:10px; background:#555; color:#fff; border:none; padding:5px 10px; cursor:pointer;">Rifiuta</button>
+</div>
+
+<script>
+  function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days*864e5).toUTCString();
+    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+  }
+
+  function getCookie(name) {
+    const cookies = document.cookie.split(';').map(c => c.trim());
+    for (let c of cookies) {
+      if (c.startsWith(name + '=')) return c.split('=')[1];
+    }
+    return null;
+  }
+
+  function hideBanner() {
+    const banner = document.getElementById('privacy-banner');
+    if (banner) banner.style.display = 'none';
+  }
+
+  window.addEventListener("load", function() {
+    const choice = getCookie("privacyAccepted");
+    if (choice === "true" || choice === "false") {
+      hideBanner();
+    } else {
+      document.getElementById("accept-button").addEventListener("click", function() {
+        setCookie("privacyAccepted", "true", 30);
+        hideBanner();
+      });
+      document.getElementById("reject-button").addEventListener("click", function() {
+        setCookie("privacyAccepted", "false", 30);
+        hideBanner();
+      });
+    }
+  });
+</script>
+
+
+
+
+</body>
+</html>
