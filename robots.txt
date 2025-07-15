@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ghostbatdev.github.io/GhostBat/sitemap.xml
