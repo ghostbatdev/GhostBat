@@ -120,20 +120,29 @@ Always verify the official ZIP hash before trusting any build.
 
 ## ⚠️ Security Notice – Antivirus False Positives
 
-GhostBat is **closed-source software**, and the ZIP package includes only compiled executable files.
+GhostBat is **closed-source software**, and the ZIP package includes compiled executable files and libraries only.
 
-Because the executables are **not digitally signed**, some antivirus programs (especially Windows Defender) may falsely flag GhostBat as a threat (e.g. `Sabsik.FL.A!ml`).  
-This is a **false positive**, caused by automated heuristic scans — not due to malicious behavior.
+Because the executables are **not digitally signed**, some antivirus programs — especially *Windows Defender* — may falsely flag GhostBat as a threat (e.g. `Sabsik.FL.A!ml`).  
+This is a **false positive**, triggered by automatic heuristic scans — not due to actual malicious behavior.
 
 GhostBat:
 
-- ✅ Does not modify Windows registry  
+- ✅ Does not modify the Windows registry  
 - ✅ Does not communicate with external servers  
 - ✅ Does not install hidden services  
-- ✅ Performs only local and reversible file operations
+- ✅ Performs only local, reversible operations under user control
 
-🛡️ The software is safe if downloaded from the [official GitHub release page](https://github.com/ghostbatdev/GhostBat/releases)  
-If flagged, you may safely add the executable to your antivirus exclusions.
+🛡️ The software is safe if downloaded from the [official GitHub release page](https://github.com/ghostbatdev/GhostBat/releases)
+
+### 🔧 Recommended Exclusions
+
+To ensure proper functionality and avoid false detections, we recommend manually excluding:
+
+- The **main folder** where the ZIP contents were extracted (includes files such as `GhostBat.exe`, `GhostBat.dll`, etc.)
+- The **`mod/` folder** generated inside **RetroBat**, if you choose to apply the mod (this folder is copied after user confirmation)
+
+These folders contain executables and linked libraries that may be flagged by antivirus heuristics.  
+Excluding the full folder ensures stable operation and prevents automatic quarantine or deletion.
 
 ---
 
