@@ -353,7 +353,7 @@ Data rilascio: <strong>11 luglio 2025</strong></p>
 <a href="https://github.com/ghostbatdev/GhostBat/releases" target="_blank" style="color:#aaa; text-decoration:underline; font-weight:bold;">
 📦 Visualizza tutte le versioni disponibili su GitHub
 </a>
-<div style="background-color:#fefefe; color:#222; padding:1.2em; border-left:4px solid #d9534f; box-shadow:0 2px 4px rgba(0,0,0,0.1); margin-top:2em; border-radius:6px;">
+<div style="background-color:#fff8f8; color:#222; padding:1.2em; border-left:4px solid #d9534f; box-shadow:0 2px 4px rgba(0,0,0,0.1); margin-top:2em; border-radius:6px;">
   <h3 style="color:#d9534f;">⚠️ Sicurezza e rilevamenti antivirus</h3>
   <p>GhostBat è software <strong>closed-source</strong>. Il pacchetto ZIP contiene esclusivamente file eseguibili compilati (.exe).</p>
   <p>A causa dell'<strong>assenza di firma digitale</strong>, alcuni antivirus — in particolare <em>Windows Defender</em> — possono <strong>segnalare il file come minaccia</strong> (<code>Sabsik.FL.A!ml</code> o simili).</p>
@@ -369,6 +369,19 @@ Data rilascio: <strong>11 luglio 2025</strong></p>
     In caso di rilevamento, è possibile aggiungerlo alle esclusioni del proprio antivirus.
   </p>
 </div>
+<div style="background-color:#fff8f8; color:#222; padding:1em 1.4em; border-left:4px solid #d9534f; box-shadow:0 2px 6px rgba(0,0,0,0.08); margin-top:2em; border-radius:6px;">
+  <h4 style="color:#d9534f;">📁 Esclusione consigliata — Cartelle da evitare nei controlli antivirus</h4>
+  <p>Per garantire il corretto funzionamento del programma ed evitare falsi positivi, si consiglia di escludere manualmente le seguenti cartelle:</p>
+  <ul style="margin-top:1em; margin-bottom:1em;">
+    <li><strong>Cartella principale</strong> dove sono stati estratti i file del pacchetto ZIP — corrisponde alla directory in cui risiedono i file come <code>GhostBat.exe</code>, <code>GhostBat.dll</code>, ecc.</li>
+    <li><code>RetroBat/mod/</code> — copia della cartella <code>mod/</code> generata <strong>solo dopo conferma esplicita</strong> da parte dell’utente</li>
+  </ul>
+  <p style="margin-top:1em;">
+    Queste cartelle contengono file eseguibili (<code>.exe</code>) e librerie (<code>.dll</code>) che potrebbero essere erroneamente segnalati come minacce.  
+    ➜ L'esclusione completa delle cartelle garantisce che il programma funzioni correttamente senza interferenze.
+  </p>
+</div>
+
 
 <h3>🔐 Verifica dell’integrità</h3>
 <p>
@@ -440,9 +453,14 @@ Verifica sempre lo SHA indicato prima di avviare il programma.
 </ul>
 <p style="margin-top:1em;">
   Il file è sicuro se <strong>scaricato dalla release ufficiale su GitHub</strong>:  
-  <a href="https://github.com/ghostbatdev/GhostBat/releases" target="_blank" style="color:#d9534f; font-weight:bold;">github.com/ghostbatdev/GhostBat/releases</a>  
-  <br>
-  Se segnalato, è possibile <em>aggiungere GhostBat.exe alle esclusioni del proprio antivirus</em> in tutta tranquillità.
+  <a href="https://github.com/ghostbatdev/GhostBat/releases" target="_blank" style="color:#d9534f; font-weight:bold;">github.com/ghostbatdev/GhostBat/releases</a>
+</p>
+<p style="margin-top:1em;">
+  Per evitare rilevamenti errati, si consiglia di <strong>escludere manualmente la cartella principale</strong> dove sono stati estratti i file del pacchetto ZIP (contenente <code>GhostBat.exe</code>, <code>GhostBat.dll</code>, ecc.).
+</p>
+<p>
+  Se si applica la mod, GhostBat può generare una copia della cartella <code>mod/</code> all’interno della struttura di <strong>RetroBat</strong> (previa conferma dell’utente).  
+  ➜ In tal caso, è consigliato <strong>escludere anche la cartella <code>mod/</code> presente in RetroBat</strong>, per evitare falsi positivi sul file <code>GhostBatLauncher.exe</code> e sulle relative librerie.
 </p>
 
   <!-- 🧭 AVVIO E INSTALLAZIONE -->
